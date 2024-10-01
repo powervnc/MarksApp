@@ -1,0 +1,74 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+button{
+    border-radius: 10px;
+    color: rgb(52, 11, 128);
+    background-color: pink;
+    padding: 10px 10px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+select{
+    width: 100px;
+}
+
+
+input{
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-color: brown;
+    border-radius: 2px;
+
+
+    
+}
+p{
+  font-size: xx-large;
+  color: rgb(100,100,200);
+}
+
+.label{
+    font-size: x-large;
+    font-style: inherit;
+}
+table{
+    
+    border-radius: 7px;
+    border-spacing: 0px;
+    border: 5px solid;
+    border-style:dashed;
+    border-color: rgba(250, 128, 114, 0.589);
+    
+}
+
+#login{
+    background-color:rgba(255, 167, 197, 0.459);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin:100px auto;
+    height: 500px;
+    width: 350px;
+    border-radius: 30px;
+    border: 5px solid;
+    
+}
+
+.welcome{
+    line-height: 50px;
+    font-size: 20px;
+    border-style:dashed;
+    border-width: 10px;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    padding: 10px;
+    color:rgb(212, 20, 113)
+    
+}

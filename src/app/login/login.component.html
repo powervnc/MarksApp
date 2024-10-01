@@ -1,0 +1,15 @@
+
+  <div id="login">
+    <p class="welcome">Hello!</p>
+    <br />
+    <p class="label">Username:</p>
+    <input (keyup)="onKeyUsername($event)" type="text" id="username" name="username" />
+    <br />
+    <p class="label">Password:</p>
+    <input (keyup)="onKeyPassword($event)" type="password" id="password" name="password"  />
+    <br />
+    <div class="button_container">
+      <button (click)="onSubmit()" type="button" id="loginButton">login</button>
+    </div>
+  </div>
+

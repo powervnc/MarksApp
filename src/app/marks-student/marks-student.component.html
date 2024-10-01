@@ -1,0 +1,45 @@
+<div>
+    <h1 id="usernameP"></h1>
+    <div id="maindiv">
+        <header class="title">
+            <h1 id="heading">Student marks</h1>
+            <button class="back-button" onclick="window.location.href='index.html'">Log out</button>
+            <button (click)="addMark()" id="add-mark-button" >ADD mark</button>
+        </header>
+        <br>
+        
+        <br>
+        <br>
+        <p class="label">Introduce the course:</p>
+        <select  id="input-course" [(ngModel)]="selectedCourse" type="text" >
+            <option *ngFor="let courseName of courseNames" [value]="courseName.name_course">{{ courseName.name_course}}</option>
+        </select>
+         
+        <button (click)="getGrades()"  id="show-marks-button">Search for marks</button>
+        <br>
+        <br>
+        <table id="marks" border="1" [style.visibility]="isTableVisible ? 'visible' : 'hidden'">
+            <thead>
+              <tr>
+                <th>Id Mark</th>
+                <th>Mark</th>
+                <th>Course Name</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of marks; let i = index">
+                <td>{{ item.id_mark }}</td>
+                <td>{{ item.mark }}</td>
+                <td>{{ item.name_course }}</td>
+                <td><button (click)="updateMark(i)" >Update</button></td>
+                <td><button (click)="deleteMark(i)" >Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+      
+        <!-- <h1 id="error">No marks given :(</h1> -->
+      </div>
+
+    </div>

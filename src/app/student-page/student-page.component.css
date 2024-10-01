@@ -1,0 +1,40 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+button{
+    border-radius: 10px;
+    color: rgb(52, 11, 128);
+    background-color: pink;
+    padding: 10px 10px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+select{
+    width: 100px;
+}
+
+
+
+p{
+  font-size: xx-large;
+  color: rgb(100,100,200);
+}
+
+.label{
+    font-size: x-large;
+    font-style: inherit;
+}
+table{
+    margin:10px 0px;
+    border-radius: 7px;
+    border-spacing: 0px;
+    border: 5px solid;
+    border-style:dashed;
+    border-color: rgba(250, 128, 114, 0.589);
+    
+}
+

@@ -1,0 +1,36 @@
+<p id="usernameP"></p>
+<div id="maindiv">
+  <header class="title">
+    <button class="back-button" onclick="window.location.href='index.html'">
+      Back
+    </button>
+    <button (click)="next4Students()" class="next4-button">Next students</button>
+    <button (click)="previous4Students()" class="previous4-button">Previous students</button>
+  </header>
+  <br />
+
+  <p class="label">Introduce group:</p>
+  <select id="input-group" [(ngModel)]="selectedGroup">
+    <option *ngFor="let groupName of groupNames" [value]="groupName.name_group">{{ groupName.name_group }}</option>
+  </select>
+  <button (click)="showStudents()" class="show-button">show students</button>
+  <br /><br />
+  <h1 id="heading" [style.visibility]="isTableVisible ? 'visible' : 'hidden'">Students</h1>
+  <br />
+  <table id="students" border="1" [style.visibility]="isTableVisible ? 'visible' : 'hidden'">
+    <thead>
+      <tr>
+        <th>Id Student</th>
+        <th>GO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of students; let i = index">
+        <td>{{ item.id_student }}</td>
+        <td><button (click)="goTo(i,item.id_student)" >GO</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <h1 id="error">No students :(</h1> -->
+</div>

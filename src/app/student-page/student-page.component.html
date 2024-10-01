@@ -1,0 +1,37 @@
+<div>
+  <h1 id="usernameP"></h1>
+  <div id="maindiv">
+    <header class="title">
+
+      <h1 id="heading">Hello </h1>
+     
+      <button class="back-button" onclick="window.location.href='index.html'">
+        LogOut
+      </button>
+      <h2 [style.visibility]="isTableVisible ? 'visible' : 'hidden'">Your marks:</h2>
+    </header>
+    <table
+      id="documents"
+      border="1"
+      [style.visibility]="isTableVisible ? 'visible' : 'hidden'"
+    >
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Mark</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of marks; let i = index">
+          <td>{{ item.id_mark }}</td>
+          <td>{{ item.mark }}</td>
+          <td>{{ item.name_course }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 id="error" [style.visibility]="isErrorVisible ? 'visible' : 'hidden'">
+      {{ errorMessage }}
+    </h1>
+  </div>
+</div>
